@@ -1,0 +1,5 @@
+rembg
+pillow
+## For GPU support (CUDA 11.x), uncomment the following line and ensure you have CUDA installed:
+# onnxruntime-gpu
+## For CPU only (default), onnxruntime is usually installed by rembg automatically.

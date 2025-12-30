@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<meta charset="UTF-8" />
+<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BG Remover</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Inter:wght@400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
+<script>
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    primary: "#FF9F29",
+                    "background-light": "#F8F9FA",
+                    "background-dark": "#121212",
+                    "surface-light": "#FFFFFF",
+                    "surface-dark": "#1E1E1E",
+                    "accent-blue": "#3B82F6",
+                    "accent-purple": "#8B5CF6",
+                    "accent-pink": "#EC4899",
+                },
+                fontFamily: {
+                    display: ["Anton", "sans-serif"],
+                    body: ["Inter", "sans-serif"],
+                },
+                boxShadow: {
+                    'neobrutalism': '4px 4px 0px 0px rgba(0,0,0,1)',
+                    'neobrutalism-sm': '2px 2px 0px 0px rgba(0,0,0,1)',
+                    'neobrutalism-hover': '2px 2px 0px 0px rgba(0,0,0,1)',
+                }
+            },
+        },
+    };
+</script>
+<style>
+    .slush-shadow {
+        box-shadow: 5px 5px 0px 0px #000;
+    }
+
+    .slush-card:hover {
+        transform: translate(-2px, -2px);
+        box-shadow: 7px 7px 0px 0px #000;
+    }
+
+    .dark .slush-shadow {
+        box-shadow: 5px 5px 0px 0px #ffffff;
+    }
+
+    .dark .slush-card:hover {
+        box-shadow: 7px 7px 0px 0px #ffffff;
+    }
+
+    /* Checkerboard pattern for transparency */
+    /* Checkerboard pattern for transparency */
+    .bg-checkerboard {
+        background-color: #f0f0f0 !important;
+        background-image:
+            linear-gradient(45deg, #ddd 25%, transparent 25%),
+            linear-gradient(-45deg, #ddd 25%, transparent 25%),
+            linear-gradient(45deg, transparent 75%, #ddd 75%),
+            linear-gradient(-45deg, transparent 75%, #ddd 75%) !important;
+        background-size: 20px 20px !important;
+        background-position: 0 0, 0 10px, 10px -10px, -10px 0px !important;
+    }
+
+    .dark .bg-checkerboard {
+        background-color: #1a1a1a !important;
+        background-image:
+            linear-gradient(45deg, #222 25%, transparent 25%),
+            linear-gradient(-45deg, #222 25%, transparent 25%),
+            linear-gradient(45deg, transparent 75%, #222 75%),
+            linear-gradient(-45deg, transparent 75%, #222 75%) !important;
+    }
+</style>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>
